@@ -7,9 +7,10 @@ Backend: Django + Django REST Framework
 Database: Default Django DB (SQLite unless configured otherwise)
 Authentication: Token-based (Django REST Framework Token Authentication)
 📸 Screenshots
-<img width="1019" height="715" alt="image" src="https://github.com/user-attachments/assets/52ad7d94-ca45-429d-bbb2-395537776765" />
-<img width="1026" height="705" alt="image" src="https://github.com/user-attachments/assets/9637c3fb-12a8-4a52-8cde-038dde32ba8c" />
 
+Place your <img width="1004" height="565" alt="Screenshot 2026-07-27 130121" src="https://github.com/user-attachments/assets/d4ae87c7-a375-41f1-b9a9-4fd18f680413" />
+.png and <img width="1015" height="510" alt="Screenshot 2026-07-27 130525" src="https://github.com/user-attachments/assets/da575cb2-48ea-495c-a1fd-c32f90121261" />
+.png screenshots in the same folder as this README so they render correctly.
 
 ✨ Features
 User Registration: Create a new account with email and password
@@ -19,7 +20,30 @@ Session Persistence: Remember logged-in user across app restarts
 Logout: Clear authentication token and return to login screen
 Input Validation: Email and password validation on both frontend and backend
 Error Handling: User-friendly error messages for failed auth attempts
-
+🗂️ Project Structure
+.
+├── flutter_app/
+│   ├── lib/
+│   │   ├── main.dart              # App entry point + navigation
+│   │   ├── screens/
+│   │   │   ├── login_screen.dart   # Login UI
+│   │   │   ├── register_screen.dart# Registration UI
+│   │   │   └── home_screen.dart    # Post-login home screen
+│   │   ├── api_service.dart        # REST API client
+│   │   └── models/
+│   │       └── user.dart           # User data model
+│   └── pubspec.yaml
+│
+└── django_backend/
+    └── myapp/
+        ├── models.py               # Custom User model (optional)
+        ├── serializers.py          # Registration & Login serializers
+        ├── views.py                # Register & Login ViewSets
+        └── urls.py                 # Auth endpoint routes
+    └── myproject/
+        ├── settings.py             # INSTALLED_APPS config
+        └── urls.py                 # Root URL config
+🔧 Backend Setup (Django)
 1. Create and activate a virtual environment
 bash
 python -m venv venv
